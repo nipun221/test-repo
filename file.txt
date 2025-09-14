@@ -1,1 +1,82 @@
 this is a demo file.
+
+shanks@gryphon:~/Documents/test-repo$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/shanks/Documents/test-repo/.git/
+
+shanks@gryphon:~/Documents/test-repo$ git remote add origin git@github.com:nipun221/test-repo.git
+
+shanks@gryphon:~/Documents/test-repo$ git remote -v
+origin  git@github.com:nipun221/test-repo.git (fetch)
+origin  git@github.com:nipun221/test-repo.git (push)
+
+shanks@gryphon:~/Documents/test-repo$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.py
+
+shanks@gryphon:~/Documents/test-repo$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file.txt
+        new file:   test.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+shanks@gryphon:~/Documents/test-repo$ git add .
+
+shanks@gryphon:~/Documents/test-repo$ git checkout -b main
+Switched to a new branch 'main'
+
+shanks@gryphon:~/Documents/test-repo$ git commit -m "initial commit - Hello & demo"
+[main (root-commit) a94de49] initial commit - Hello & demo
+ 2 files changed, 2 insertions(+)
+ create mode 100644 file.txt
+ create mode 100644 test.py
+
+shanks@gryphon:~/Documents/test-repo$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 304 bytes | 304.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:nipun221/test-repo.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+shanks@gryphon:~/Documents/test-repo$ git checkout -b master
+Switched to a new branch 'master'
+
+shanks@gryphon:~/Documents/test-repo$ git branch
+  main
+* master
