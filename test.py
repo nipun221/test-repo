@@ -9,3 +9,10 @@ print(a * 2)
 # Multi-dimensional array
 res = np.array([[1, 2], [3, 4]])
 print(res * 2)
+
+# Define a tuple
+tup = (1, 2, 3, 4, 5)
+
+# Traverse through each item in the tuple
+for x in tup:
+    print(x, end=" ")
