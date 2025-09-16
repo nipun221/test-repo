@@ -15,3 +15,10 @@ s1 = "H" + s[1:]                   # update first character
 s2 = s.replace("geeks", "GeeksforGeeks")  # replace word
 print(s1)
 print(s2)
+
+# Define a tuple
+tup = (1, 2, 3, 4, 5)
+
+# Traverse through each item in the tuple
+for x in tup:
+    print(x, end=" ")
