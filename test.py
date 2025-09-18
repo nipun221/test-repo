@@ -27,3 +27,5 @@ s = "Geeks for Geeks"
 
 a = s.split()
 print(a)
+
+print("This comment is only written to check if pre-commit hook is working fine!")
